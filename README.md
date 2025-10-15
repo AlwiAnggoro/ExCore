@@ -594,9 +594,9 @@ pnpm --filter @excore/core db:studio
 - 🔄 **Phase 7**: Packaging & DX Polish (40%)
 - ⏳ **Phase 8**: Release Readiness
 
-**Target Release**: v0.1.0 - December 2025
+**Overall Progress: ~93%**
 
-See [roadmap.md](./roadmap.md) for detailed progress and phase descriptions.
+See [roadmap.md](./roadmap.md) for detailed feature lists and completion status.
 
 ---
 

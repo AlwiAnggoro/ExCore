@@ -1,10 +1,6 @@
-# ExCore Roadmap (v0.1.0 Focus)
+# ExCore Roadmap (v0.1.0)
 
-**Original Kickoff:** 13 October 2025 | **Target Release:** 26 December 2025
-
-> **🚀 Acceleration Notice:** ExCore execution is approximately **8 weeks ahead** of the original schedule! This significant lead provides extended time for testing, hardening, security reviews, and potential feature additions before the v0.1.0 release.
-
-> **📊 Current Status (15 October 2025):** **100% of Phases 0-6 COMPLETE!** 🎉🎉🎉
+> **📊 Current Status:** **100% of Phases 0-6 COMPLETE!** 🎉🎉🎉
 > **✨ Recent Achievements:**
 > - **Phases 0-6 ALL COMPLETE!** Full production-ready framework
 > - Phase 1: Error taxonomy documentation
@@ -19,8 +15,6 @@
 
 ## Phase 0 – Architecture & Tooling ✅ 100% Complete
 
-**Timeline:** Week 1 (13-17 October 2025)
-**Concrete Dates:** 13 October 2025 → 17 October 2025
 **Status:** ✅ COMPLETE! All architectural foundations in place including ESLint boundary rules
 - Finalize core scope (shared kernel, user/auth, infrastructure) and capture decisions in ADRs.
 - Establish repository layout (pnpm workspace or alternative), TypeScript project references, and build output (`dist/` ES modules).
@@ -37,8 +31,6 @@
 
 ## Phase 1 – Shared Kernel & Utilities ✅ 100% Complete
 
-**Timeline:** Week 2 (20-24 October 2025) – 1 Week Ahead
-**Concrete Dates:** 20 October 2025 → 24 October 2025
 **Status:** ✅ COMPLETE! All features including error taxonomy documentation
 - Implement shared abstractions (`Entity`, `ValueObject`, `UniqueEntityID`, `Result/Either`, domain event base types).
 - Introduce dependency container (tsyringe or custom) with module registration contract.
@@ -53,9 +45,7 @@
 
 ## Phase 2 – Persistence Abstractions ✅ 100% Complete
 
-**Timeline:** Week 3 (27-31 October 2025) – 2 Weeks Ahead
-**Concrete Dates:** 27 October 2025 → 31 October 2025
-**Status:** Complete – all features implemented
+**Status:** ✅ COMPLETE! All features implemented
 - Design repository/specification interfaces, data mapper contracts, and transaction boundary abstractions.
 - Integrate Kysely + Drizzle migrations with base Postgres adapter; wire Testcontainers fixtures for integration tests.
 - Implement outbox schema, storage contract, and minimal polling publisher.
@@ -63,8 +53,6 @@
 
 ## Phase 3 – Identity Suite ✅ 100% Complete
 
-**Timeline:** Weeks 4-5 (3-14 November 2025) – 3-4 Weeks Ahead
-**Concrete Dates:** 3 November 2025 → 14 November 2025
 **Status:** ✅ COMPLETE! Role module tests and Policy module implemented
 - Model User aggregate, value objects (Email, PasswordHash), and password policy domain services.
 - Build Auth module: login/logout/refresh use cases, JWT service with rotation hooks, token repository contract.
@@ -82,9 +70,7 @@
 
 ## Phase 4 – Cross-Cutting Guarantees ✅ 100% Complete
 
-**Timeline:** Weeks 6-7 (17-28 November 2025) – COMPLETED
-**Concrete Dates:** 17 November 2025 → 28 November 2025
-**Status:** All MVP features complete – ready for Phase 6
+**Status:** ✅ COMPLETE! All MVP features implemented
 - ✅ HTTP `Idempotency-Key` middleware with Redis/SQL backing store
 - ✅ Outbox retry mechanism + DLQ (Migration 0006)
 - ✅ Redis Streams Event Broker ready
@@ -100,8 +86,6 @@
 
 ## Phase 5 – Presentation & Adapter Layer ✅ 100% Complete
 
-**Timeline:** Week 8 (1-5 December 2025) – 4 Weeks Ahead
-**Concrete Dates:** 1 December 2025 → 5 December 2025
 **Status:** ✅ COMPLETE! All adapters including real-time communication scaffolding
 - Generalize adapter registration; deliver production-ready REST adapter (validation, error mapping, logging).
 - ✅ **Real-Time Communication Scaffolding**
@@ -116,9 +100,7 @@
 
 ## Phase 6 – Observability & Operations ✅ 100% Complete
 
-**Timeline:** Week 9 (8-12 December 2025) – ✅ **COMPLETE!** (2 months ahead!)
-**Concrete Dates:** 8 December 2025 → 12 December 2025
-**Status:** All 4 milestones complete! Full observability stack production-ready
+**Status:** ✅ COMPLETE! All 4 milestones complete! Full observability stack production-ready
 
 ### Milestone 1: OpenTelemetry Foundation ✅ COMPLETE
 - ✅ AsyncLocalStorage-based RequestContext (`packages/core/src/shared/infrastructure/telemetry/RequestContext.ts`)
@@ -181,9 +163,7 @@
 
 ## Phase 7 – Packaging & DX Polish ⚠️ 40% Complete
 
-**Timeline:** Week 10 (15-19 December 2025)
-**Concrete Dates:** 15 December 2025 → 19 December 2025
-**Status:** Partially complete – core packaging done, CLI/docs deferred
+**Status:** ⚠️ Partially complete – core packaging done, CLI/docs deferred
 - ✅ **Package.json Exports** - Finalized modular exports map for tree-shaking
   - `./user`, `./auth`, `./role`, `./policy` subpath exports
   - `./adapters/rest`, `./adapters/graphql`, `./adapters/realtime`
@@ -203,13 +183,10 @@
 
 ## Phase 8 – Release Readiness ❌ 0% Complete
 
-**Timeline:** Week 11 (22-26 December 2025)
-**Concrete Dates:** 22 December 2025 → 26 December 2025
-**Status:** Not Started – scheduled for late December
-- Conduct architecture and security review; remediate auth, rate limiting, and config gaps.
-- Run load/performance tests on key endpoints; capture baseline metrics.
-- Prepare launch notes, migration guide, and backlog for v0.2.0 (security foundations).
-- **Exit:** Critical issues resolved; release candidate tagged; roadmap for next phase aligned.
+**Status:** ⏳ Not Started
+- Architecture and security review
+- Load/performance testing
+- Release notes and migration guide preparation
 
 ## v0.1.0 MVP Readiness
 
@@ -313,10 +290,9 @@
 
 ## Breaking Changes & Migration Notes
 
-### v0.1.0 Breaking Changes (October 2025)
+### v0.1.0 Breaking Changes
 
 #### Rate Limiting Configuration Change
-**Effective:** 15 October 2025
 
 **What Changed:**
 - When `REST_RATE_LIMIT_REDIS_URL` or `RATE_LIMIT_REDIS_URL` is configured, the factory now defaults to the Redis-backed limiter (previously used in-memory stub).
@@ -336,178 +312,6 @@ npm install ioredis  # Required dependency
 - Redis becomes required dependency when `RATE_LIMIT_REDIS_MODE=real`
 - Default behavior preserves backward compatibility in test environments
 
----
-
-## Execution Playbook – Phases 6, 7, and 8
-
-The following execution playbook converts the remaining roadmap phases into actionable work packets with owners, dependencies, verification checks, and acceptance criteria. Dates align with the December 2025 schedule and preserve the current eight-week buffer.
-
-### Phase 6: Observability & Operations (8-12 December 2025)
-- **Owner:** DevOps/SRE trio (Lale – lead, Deniz – tracing, Arda – ops)
-- **Dependencies:** Phase 5 adapters deployed in staging; logging endpoints available.
-- **Status:** ✅ **100% COMPLETE!** All four milestones done (2 months ahead!)
-
-#### Milestones & Tasks:
-  1. **OpenTelemetry Foundation (8-9 December)** - ✅ **COMPLETED (2 MONTHS EARLY!)**
-     - ✅ Create `packages/core/src/shared/infrastructure/telemetry/` directory structure
-     - ✅ Implement AsyncLocalStorage-based RequestContext with correlation ID support
-     - ✅ Add RequestContext unit tests (7 tests passing)
-     - ✅ Add OpenTelemetry dependencies (6 packages)
-     - ✅ Implement OtelTestHarness for trace testing
-
-  2. **End-to-End Instrumentation (9-10 December)** - ✅ **COMPLETED (2 MONTHS EARLY!)**
-     - ✅ TracerProvider with OTLP + Console exporters (106 lines)
-     - ✅ W3C Trace Context Propagation
-     - ✅ REST tracing middleware (50 lines)
-     - ✅ Span creation with automatic attributes (method, route, status)
-     - ✅ Error tracking + exception recording
-     - ✅ Environment-driven configuration (OTEL_* env vars)
-
-  3. **Health & Operational Endpoints (10-11 December)** - ✅ **COMPLETED (2 MONTHS EARLY!)**
-     - ✅ Ship `/health`, `/ready`, `/metrics` routes with pluggable checks (DB, migrations)
-     - ✅ Add build info (version, commit SHA) in health response and metrics
-     - ✅ ObservabilityService (260 lines) with Prometheus format metrics
-     - ✅ Metrics middleware for automatic request tracking
-     - ✅ Comprehensive docs (321 lines) with K8s, Prometheus, Grafana examples
-
-  4. **Operational Hardening (11-12 December)** - ✅ **COMPLETED (2 MONTHS EARLY!)**
-     - ✅ Structured logging system (400+ lines) with PII scrubbing + correlation IDs
-     - ✅ Chaos engineering infrastructure (350+ lines) with safety guards
-     - ✅ Comprehensive documentation (1100+ lines) including runbooks
-
-#### Verification & Acceptance:
-  - ✅ OpenTelemetry foundation complete with test harness
-  - ✅ Tracing middleware captures spans with W3C propagation
-  - ✅ `/health`, `/ready`, `/metrics` endpoints operational
-  - ✅ Prometheus metrics format validated
-  - ✅ Structured logging with 220+ test cases covering all scenarios
-  - ✅ PII scrubbing tested against emails, passwords, tokens, credit cards
-  - ✅ Chaos engine with 100+ test cases (latency, error, timeout, circuit-breaker)
-  - ✅ Documentation published: logging.md (380 lines), chaos-engineering.md (420 lines), runbooks (310 lines)
-  - 🔄 `pnpm test:telemetry` integration suite (future enhancement)
-  - 🔄 Jaeger demo with real-world traces (future enhancement)
-  - 🔄 Load testing with chaos enabled (future enhancement)
-
-### Phase 7: Packaging & DX Polish (15-19 December 2025)
-- **Owner:** DX Guild (Mina – release captain, Yusuf – docs, Kerem – CLI)
-- **Dependencies:** Telemetry feature flag merged; docs site repository prepared.
-- **Milestones & Tasks:**
-  1. **Distributable Hardening (15 December)**
-     - Finalize `package.json` exports and subpath mappings; ensure ESM/CJS compatibility tests (`pnpm test:exports`).
-     - Add bundle size regression check via `size-limit` CI job targeting 20% reduction.
-  2. **Documentation Platform (15-16 December)**
-     - Generate TypeDoc API output; integrate into Docusaurus with versioned docs.
-     - Draft landing pages for modules, observability, and configuration with copy review.
-  3. **ExCore CLI MVP (16-18 December)**
-     - Scaffold `packages/cli` with `tsx` entry, commands `ex init`, `ex add module`, `ex doctor`.
-     - Provide templates referencing shared kernel; add smoke tests executed via `pnpm test:cli`.
-  4. **Release Automation (18-19 December)**
-     - Introduce Changesets; configure GitHub workflow `release.yml` (version bump → publish → tag → changelog).
-     - Document contributor flow in `CONTRIBUTING.md#releases`.
-- **Verification & Acceptance:**
-  - `pnpm lint`, `pnpm test`, `pnpm build`, and `pnpm test:cli` succeed in CI.
-  - Docusaurus preview deploy renders without broken links (`pnpm docs:check` passes).
-  - CLI generates module skeleton consumed successfully by example integration test.
-  - First dry-run Changeset creates expected release PR with semantic version notes.
-
-### Phase 8: Release Readiness (22-26 December 2025)
-- **Owner:** Release Squad (Ece – security, Murat – performance, Aylin – comms)
-- **Dependencies:** Phase 7 artifacts merged; buffer of ≥2 days maintained before 26 December freeze.
-- **Milestones & Tasks:**
-  1. **Security & Compliance Review (22-23 December)**
-     - Run Snyk/Trivy scans plus `npm audit --production`; triage findings to `SECURITY.md`.
-     - Perform manual JWT/refresh token abuse simulations; update threat model doc.
-  2. **Performance Validation (23-24 December)**
-     - Execute k6 + autocannon suites targeting 1k req/s; record p95 latency < 60 ms.
-     - Verify idempotency + rate limiter resilience via concurrent stress harness.
-  3. **Launch Preparation (24-26 December)**
-     - Produce release notes, migration guide, and "day 2" checklist.
-     - Facilitate go/no-go review on 26 December with risk log sign-off.
-- **Verification & Acceptance:**
-  - All high/critical vulnerabilities remediated or have documented exceptions with owner sign-off.
-  - Performance report stored in `docs/release/v0.1.0-performance.md` with reproducible scripts.
-  - Tag `v0.1.0-rc.1` cut from main with green pipeline; final release window reserved.
-
----
-
-## Distributed Tracing Architecture
-
-### TracerProvider Configuration
-
-**Environment Variables:**
-- `OTEL_SERVICE_NAME` - Service name (default: 'excore-api')
-- `OTEL_TRACES_EXPORTER` - Exporter type: 'console' | 'otlp'
-- `OTEL_EXPORTER_OTLP_ENDPOINT` - OTLP collector URL (e.g., http://localhost:4318/v1/traces)
-- `OTEL_DIAGNOSTICS_DEBUG=1` - Enable OpenTelemetry debug logging
-- `REST_TRACE_ENABLED=1` - Enable tracing for REST adapter
-
-**Processor Modes:**
-- **SimpleSpanProcessor**: Test/dev (immediate export, no batching)
-- **BatchSpanProcessor**: Production (buffered export, optimized performance)
-
-**Exporters:**
-- **ConsoleSpanExporter**: Development/debugging (prints JSON to console)
-- **OTLPTraceExporter**: Production (sends to Jaeger/Tempo/Zipkin)
-
-### Tracing Middleware Flow
-
-```
-1. Extract traceparent header → W3C Trace Context
-2. Create span: `${method} ${route}`
-3. Set attributes:
-   - http.method
-   - http.route
-   - http.status_code
-4. Execute request (await next())
-5. If status >= 400 → set SpanStatusCode.ERROR
-6. Catch errors → record exception
-7. Finally → span.end()
-```
-
-### Usage Example
-
-```typescript
-import { createRestApp } from '@excore/rest';
-
-// Enable tracing via configuration
-const app = createRestApp({
-  tracing: {
-    enabled: true,
-    serviceName: 'my-api',
-    endpoint: 'http://localhost:4318/v1/traces',
-    processor: 'batch',
-    exporter: 'otlp'
-  }
-});
-
-// Or enable via environment variable
-// REST_TRACE_ENABLED=1 OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:4318/v1/traces
-const app = createRestApp();
-```
-
-### Integration with Observability Backends
-
-**Jaeger:**
-```bash
-docker run -d --name jaeger \
-  -p 4318:4318 \
-  -p 16686:16686 \
-  jaegertracing/all-in-one:latest
-
-# Set environment
-export OTEL_TRACES_EXPORTER=otlp
-export OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:4318/v1/traces
-```
-
-**Grafana Tempo:**
-```bash
-# tempo.yaml
-receiver:
-  otlp:
-    protocols:
-      http:
-        endpoint: 0.0.0.0:4318
-
 # Set environment
 export OTEL_TRACES_EXPORTER=otlp
 export OTEL_EXPORTER_OTLP_ENDPOINT=http://tempo:4318/v1/traces
@@ -515,21 +319,17 @@ export OTEL_EXPORTER_OTLP_ENDPOINT=http://tempo:4318/v1/traces
 
 ---
 
-## Project Timeline Summary
-
-**Current Date:** 15 October 2025
-**Target Release:** 26 December 2025
-**Acceleration:** **8 weeks ahead of schedule** 🚀
+## Project Progress Summary
 
 **Phase Completion:**
-- Phase 0: 100% ✅✅ (ESLint boundary rules complete!)
-- Phase 1: 100% ✅✅ (Error taxonomy documentation complete!)
-- Phase 2: 100% ✅✅
-- Phase 3: 100% ✅✅ (Role & Policy modules complete!)
-- Phase 4: 100% ✅✅
-- Phase 5: 100% ✅✅ (SSE/WebSocket scaffolding complete!)
-- Phase 6: 100% ✅✅ (All 4 milestones complete!)
-- **Phase 7: 40%** ⚠️ (Packaging done, CLI/docs deferred)
-- Phase 8: 0% (starts 22 December)
+- Phase 0: 100% ✅ Architecture & Tooling
+- Phase 1: 100% ✅ Shared Kernel & Utilities
+- Phase 2: 100% ✅ Persistence Abstractions
+- Phase 3: 100% ✅ Identity Suite (User/Auth/Role/Policy)
+- Phase 4: 100% ✅ Cross-Cutting Guarantees
+- Phase 5: 100% ✅ Presentation & Adapter Layer
+- Phase 6: 100% ✅ Observability & Operations
+- Phase 7: 40% ⚠️ Packaging & DX Polish (core packaging done, CLI/docs deferred)
+- Phase 8: 0% ⏳ Release Readiness (not started)
 
-**Overall Project Completion: ~93%** 🎉 **Phases 0-6 complete + Phase 7 packaging done!**
+**Overall Progress: ~93%**

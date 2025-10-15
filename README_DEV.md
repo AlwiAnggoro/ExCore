@@ -95,26 +95,21 @@ ExCore/
 
 ## Current Implementation Status
 
-| Phase | Focus | Status | Notes |
-| --- | --- | --- | --- |
-| 0 | Architecture & Tooling | 🚧 In Progress (75%) | Repo layout, TS/ESLint/Prettier, Vitest, build tooling done; ADR bundle, GitHub Actions pipeline, hooks, ESLint boundaries outstanding |
-| 1 | Shared Kernel & Utilities | ✅ Nearly Complete (95%) | Entities, ValueObjects, Result/Guard, DomainEvents, DI container, console logger, config loader done; error taxonomy documentation pending |
-| 2 | Persistence Abstractions | ✅ Nearly Complete (90%) | Repositories, migrations, outbox pipeline, Testcontainers ready; broker integration and specification pattern outstanding |
-| 3 | Identity Suite | ✅ Core Complete (90%) | User/Auth modules shipped with E2E coverage; role tests and optional policy module pending |
-| 4 | Cross-Cutting Guarantees | 🚧 Hardening (70%) | Idempotency, audit trail, memory limiter, outbox pipeline shipped; Redis limiter, broker retries, idempotency and rate-limit tests outstanding |
-| 5 | Presentation & Adapter Layer | 🚧 In Progress (85%) | REST and GraphQL adapters near-ready; rate limiting integration, observability context, SSE/WebSocket scaffolding pending |
-| 6 | Observability & Operations | ⚪ Not Started | OpenTelemetry pipeline, health/readiness endpoints, PII-safe logging to implement |
-| 7 | Packaging & DX Polish | ⚪ Not Started | Exports map tightening, Typedoc/Docusaurus, ExCore CLI, release automation outstanding |
-| 8 | Release Readiness | ⚪ Not Started | Security review, load/performance tests, launch notes, migration guide, v0.2.0 planning pending |
+| Phase | Focus | Status |
+| --- | --- | --- |
+| 0 | Architecture & Tooling | ✅ 100% Complete |
+| 1 | Shared Kernel & Utilities | ✅ 100% Complete |
+| 2 | Persistence Abstractions | ✅ 100% Complete |
+| 3 | Identity Suite | ✅ 100% Complete |
+| 4 | Cross-Cutting Guarantees | ✅ 100% Complete |
+| 5 | Presentation & Adapter Layer | ✅ 100% Complete |
+| 6 | Observability & Operations | ✅ 100% Complete |
+| 7 | Packaging & DX Polish | ⚠️ 40% Complete (core packaging done) |
+| 8 | Release Readiness | ⏳ Not Started |
 
-### Immediate Next Steps
+**Overall Progress: ~93%**
 
-- ADR baseline (template plus starter ADRs for DDD structure, repository pattern, JWT strategy, outbox pattern)
-- GitHub Actions CI pipeline (lint -> test -> build with PR checks and branch protections)
-- Husky and lint-staged hooks with ESLint boundaries enforcement
-- Phase 4 hardening (Redis rate limiter, broker integration with retries, idempotency and rate-limit test suites)
-
-**Next focus:** close out Phase 0 documentation/CI/hook work, then drive Phase 4 hardening before expanding observability.
+See [roadmap.md](./roadmap.md) for detailed feature lists and completion status.
 
 ## Development Workflow
 
