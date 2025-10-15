@@ -1,0 +1,101 @@
+{
+  "name": "@excore/core",
+  "version": "0.1.0",
+  "description": "ExCore - Modular TypeScript framework for building production-ready backend applications",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./shared": {
+      "types": "./dist/shared/index.d.ts",
+      "import": "./dist/shared/index.js"
+    },
+    "./user": {
+      "types": "./dist/modules/user/index.d.ts",
+      "import": "./dist/modules/user/index.js"
+    },
+    "./auth": {
+      "types": "./dist/modules/auth/index.d.ts",
+      "import": "./dist/modules/auth/index.js"
+    },
+    "./role": {
+      "types": "./dist/modules/role/index.d.ts",
+      "import": "./dist/modules/role/index.js"
+    },
+    "./policy": {
+      "types": "./dist/modules/policy/index.d.ts",
+      "import": "./dist/modules/policy/index.js"
+    },
+    "./adapters/rest": {
+      "types": "./dist/adapters/rest/index.d.ts",
+      "import": "./dist/adapters/rest/index.js"
+    },
+    "./adapters/graphql": {
+      "types": "./dist/adapters/graphql/index.d.ts",
+      "import": "./dist/adapters/graphql/index.js"
+    },
+    "./adapters/realtime": {
+      "types": "./dist/adapters/realtime/index.d.ts",
+      "import": "./dist/adapters/realtime/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "build:watch": "tsc -p tsconfig.json --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:unit": "vitest run --reporter=basic",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "excore",
+    "framework",
+    "backend",
+    "typescript",
+    "ddd",
+    "clean-architecture",
+    "nodejs",
+    "rest",
+    "graphql",
+    "websocket"
+  ],
+  "author": "ExCore Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/excore/excore.git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/excore/excore/issues"
+  },
+  "homepage": "https://excore.dev",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {
+    "typescript": ">=5.0.0"
+  }
+}

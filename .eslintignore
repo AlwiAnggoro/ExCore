@@ -1,0 +1,11 @@
+node_modules
+dist
+build
+coverage
+*.config.js
+*.config.ts
+.code
+.husky
+docs
+*.md
+pnpm-lock.yaml
