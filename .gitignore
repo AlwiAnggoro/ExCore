@@ -36,3 +36,18 @@ Thumbs.db
 # Temporary
 *.tmp
 .temp/
+
+# Archives
+*.tar
+*.tar.gz
+*.zip
+*.rar
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Package manager
+package-lock.json
+yarn.lock
