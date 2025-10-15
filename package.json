@@ -1,7 +1,40 @@
 {
   "name": "excore",
+  "version": "0.1.0",
+  "description": "Production-Ready TypeScript Backend Framework built on Clean Architecture and Domain-Driven Design principles",
   "private": true,
   "type": "module",
+  "keywords": [
+    "typescript",
+    "framework",
+    "backend",
+    "ddd",
+    "domain-driven-design",
+    "clean-architecture",
+    "nodejs",
+    "rest-api",
+    "graphql",
+    "microservices",
+    "monorepo",
+    "jwt",
+    "rbac",
+    "observability",
+    "opentelemetry"
+  ],
+  "author": "ExCore Team <noreply@excore.dev>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VenoMexx/ExCore.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VenoMexx/ExCore/issues"
+  },
+  "homepage": "https://github.com/VenoMexx/ExCore#readme",
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "vitest run",

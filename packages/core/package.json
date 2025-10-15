@@ -1,7 +1,7 @@
 {
   "name": "@excore/core",
   "version": "0.1.0",
-  "description": "ExCore - Modular TypeScript framework for building production-ready backend applications",
+  "description": "Production-Ready TypeScript Backend Framework with Clean Architecture, DDD, JWT Auth, RBAC, GraphQL, REST, Real-time SSE, and OpenTelemetry Observability",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -65,27 +65,48 @@
   },
   "keywords": [
     "excore",
+    "typescript",
     "framework",
     "backend",
-    "typescript",
     "ddd",
+    "domain-driven-design",
     "clean-architecture",
     "nodejs",
-    "rest",
+    "rest-api",
     "graphql",
-    "websocket"
+    "sse",
+    "server-sent-events",
+    "jwt",
+    "authentication",
+    "authorization",
+    "rbac",
+    "role-based-access-control",
+    "microservices",
+    "monorepo",
+    "kysely",
+    "drizzle",
+    "postgresql",
+    "observability",
+    "opentelemetry",
+    "tracing",
+    "structured-logging",
+    "rate-limiting",
+    "idempotency",
+    "outbox-pattern",
+    "event-driven",
+    "domain-events"
   ],
-  "author": "ExCore Team",
+  "author": "ExCore Team <noreply@excore.dev>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/excore/excore.git",
+    "url": "https://github.com/VenoMexx/ExCore.git",
     "directory": "packages/core"
   },
   "bugs": {
-    "url": "https://github.com/excore/excore/issues"
+    "url": "https://github.com/VenoMexx/ExCore/issues"
   },
-  "homepage": "https://excore.dev",
+  "homepage": "https://github.com/VenoMexx/ExCore#readme",
   "publishConfig": {
     "access": "public"
   },
