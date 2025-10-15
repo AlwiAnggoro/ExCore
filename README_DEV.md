@@ -200,10 +200,6 @@ Run tests with verbose output:
 pnpm test -- --reporter=verbose
 ```
 
-## Contributing
-
-See `CLAUDE.md` for detailed architectural guidance and conventions.
-
 ## Resources
 
 - [DDD Reference](https://www.domainlanguage.com/ddd/reference/)
